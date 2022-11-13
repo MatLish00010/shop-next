@@ -1,0 +1,11 @@
+{
+    "editor.inlayHints.enabled": "on",
+    "editor.scrollbar.verticalScrollbarSize": 2,
+    "editor.scrollBeyondLastLine": false,
+    "editor.tabCompletion": "off",
+    "editor.trimAutoWhitespace": true,
+    "cSpell.words": [
+        "Influencers",
+        "leaderboard"
+    ]
+}
