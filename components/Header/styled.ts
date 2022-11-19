@@ -1,5 +1,6 @@
 import styled from 'styled-components';
-import Image from 'next/image';
+
+import { Logo, Heard, Search, Basket } from 'components/svgs';
 
 export const Header = styled.header<{ isTransparent: boolean }>`
   padding: 30px 80px;
@@ -8,7 +9,7 @@ export const Header = styled.header<{ isTransparent: boolean }>`
   align-items: center;
   justify-content: space-between;
 
-  p {
+  * {
     color: ${({ isTransparent }) => (isTransparent ? '#fff' : '#163f2b')};
   }
 `;
@@ -24,7 +25,6 @@ export const ButtonLanguage = styled.button<{ mr?: boolean; isSelected: boolean;
   margin-right: ${({ mr }) => (mr ? 15 : 0)}px;
   padding: 4px;
   font-weight: ${({ isSelected }) => (isSelected ? 700 : 500)};
-  color: ${({ isTransparent }) => (isTransparent ? '#fff' : '#163f2b')};
   font-size: 1rem;
   line-height: 24px;
 
@@ -47,20 +47,36 @@ export const DescriptionLogo = styled.h1`
   visibility: hidden;
 `;
 
-export const Logo = styled(Image)`
-  object-fit: contain;
+export const LogoSVG = styled(Logo)`
+  width: 115px;
+  height: 32px;
+`;
+
+export const SearchSVG = styled(Search)`
+  width: 24px;
+  height: 24px;
+`;
+
+export const HeaderSVG = styled(Heard)`
+  width: 24px;
+  height: 24px;
+`;
+
+export const BasketSVG = styled(Basket)`
+  width: 24px;
+  height: 24px;
 `;
 
 export const Nav = styled.nav`
   flex: 1 1 100%;
   display: flex;
   justify-content: flex-end;
+  align-items: center;
 `;
 
-export const ButtonLogin = styled.button<{ isTransparent: boolean }>`
+export const ButtonLogin = styled.button`
   border: none;
   background: none;
-  color: ${({ isTransparent }) => (isTransparent ? '#fff' : '#163f2b')};
   font-size: 1rem;
   line-height: 24px;
   text-transform: uppercase;

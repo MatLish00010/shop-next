@@ -29,13 +29,14 @@ const Header = () => {
       </S.WrapperLanguage>
       <Link href="/">
         <S.DescriptionLogo>YONNE</S.DescriptionLogo>
-        <S.Logo src={isTransparent ? '/images/logo.png' : '/images/logoDark.png'} width={155} height={32} alt="Logo" />
+        <S.LogoSVG />
       </Link>
 
       <S.Nav>
-        <S.ButtonLogin isTransparent={isTransparent} onClick={() => console.log('go Login')}>
-          Login
-        </S.ButtonLogin>
+        <S.ButtonLogin onClick={() => console.log('go Login')}>Login</S.ButtonLogin>
+        <S.SearchSVG />
+        <S.HeaderSVG />
+        <S.BasketSVG />
       </S.Nav>
     </S.Header>
   );
