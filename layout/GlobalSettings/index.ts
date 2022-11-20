@@ -1,17 +1,27 @@
-html,
-body {
-    padding: 0;
-    margin: 0;
+import { createGlobalStyle } from 'styled-components';
+
+const GlobalStyle = createGlobalStyle`
+  html {
+    display: block;
+    height: 100%;
     font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
     Helvetica Neue, sans-serif;
-    background-color: #CACACA;
-}
+  }
 
-a {
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: #CACACA;
+  }
+
+  a {
     color: inherit;
     text-decoration: none;
-}
+  }
 
-* {
+  * {
     box-sizing: border-box;
-}
+  }
+`;
+
+export default GlobalStyle;

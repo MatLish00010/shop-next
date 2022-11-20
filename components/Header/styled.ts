@@ -57,7 +57,7 @@ export const SearchSVG = styled(Search)`
   height: 24px;
 `;
 
-export const HeaderSVG = styled(Heard)`
+export const HeardSVG = styled(Heard)`
   width: 24px;
   height: 24px;
 `;
@@ -74,9 +74,30 @@ export const Nav = styled.nav`
   align-items: center;
 `;
 
-export const ButtonLogin = styled.button`
+export const ListNav = styled.ul`
+  display: flex;
+  align-items: center;
+`;
+
+export const ItemNav = styled.li`
+  list-style: none;
+  margin-right: 30px;
+
+  &:first-child {
+    margin-right: 50px;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+`;
+
+export const Button = styled.button`
   border: none;
   background: none;
+`;
+
+export const ButtonLogin = styled(Button)`
   font-size: 1rem;
   line-height: 24px;
   text-transform: uppercase;
