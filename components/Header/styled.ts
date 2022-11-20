@@ -4,13 +4,17 @@ import { Logo, Heard, Search, Basket } from 'components/svgs';
 
 export const Header = styled.header<{ isTransparent: boolean }>`
   padding: 30px 80px;
-  background: ${({ isTransparent }) => (isTransparent ? 'transparent' : '#fff')};
+  background: ${({ isTransparent, theme: { colors } }) => (isTransparent ? 'transparent' : colors.background.white)};
   display: flex;
   align-items: center;
   justify-content: space-between;
+  border-bottom-width: ${({ isTransparent }) => (isTransparent ? 0 : 1)}px;
+  border-bottom-color: ${({ theme: { colors } }) => colors.border.primary};
+  border-bottom-style: solid;
 
   * {
-    color: ${({ isTransparent }) => (isTransparent ? '#fff' : '#163f2b')};
+    color: ${({ isTransparent, theme: { colors } }) =>
+      isTransparent ? colors.palette.primary : colors.palette.secondary};
   }
 `;
 
@@ -38,7 +42,8 @@ export const ButtonLanguage = styled.button<{ mr?: boolean; isSelected: boolean;
     width: 5px;
     height: 5px;
     border-radius: 50%;
-    background-color: ${(props) => (props.isTransparent ? '#fff' : '#163f2b')};
+    background-color: ${({ isTransparent, theme: { colors } }) =>
+      isTransparent ? colors.palette.white : colors.palette.secondary};
   }
 `;
 
@@ -95,6 +100,8 @@ export const ItemNav = styled.li`
 export const Button = styled.button`
   border: none;
   background: none;
+  display: flex;
+  align-items: center;
 `;
 
 export const ButtonLogin = styled(Button)`

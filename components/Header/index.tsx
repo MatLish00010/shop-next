@@ -3,10 +3,12 @@ import Link from 'next/link';
 
 import * as S from './styled';
 
-const Header = () => {
-  const [language, setLanguage] = useState('EN');
+type Props = {
+  isTransparent?: boolean;
+};
 
-  const isTransparent = false;
+const Header = ({ isTransparent = false }: Props) => {
+  const [language, setLanguage] = useState('EN');
 
   return (
     <S.Header isTransparent={isTransparent}>
