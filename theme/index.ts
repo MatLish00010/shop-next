@@ -1,5 +1,19 @@
 import { DefaultTheme } from 'styled-components';
 
+const breakpoints = {
+  s: 480,
+  m: 768,
+  l: 1024,
+  xl: 1200,
+};
+
+const screenSize = {
+  mobile: `(max-width: ${breakpoints.s}px)`,
+  tablet: `(max-width: ${breakpoints.m}px)`,
+  desktop: `(max-width: ${breakpoints.l}px)`,
+  desktopBig: `(max-width: ${breakpoints.xl}px)`,
+};
+
 const theme: DefaultTheme = {
   colors: {
     palette: {
@@ -18,6 +32,8 @@ const theme: DefaultTheme = {
       primary: '#E0E5E3',
     },
   },
+  breakpoints,
+  screenSize,
 };
 
 export default theme;

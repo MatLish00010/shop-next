@@ -19,5 +19,17 @@ declare module 'styled-components' {
         primary: string;
       };
     };
+    breakpoints: {
+      s: number;
+      m: number;
+      l: number;
+      xl: number;
+    };
+    screenSize: {
+      mobile: string;
+      tablet: string;
+      desktop: string;
+      desktopBig: string;
+    };
   }
 }
