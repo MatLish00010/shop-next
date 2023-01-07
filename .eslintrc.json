@@ -1,12 +1,22 @@
 {
+  "root": true,
   "env": {
     "browser": true,
     "es2021": true
   },
   "plugins": ["@typescript-eslint"],
-  "extends": ["plugin:@typescript-eslint/recommended", "next", "next/core-web-vitals", "prettier"],
+  "ignorePatterns": ["next.config.js"],
+  "extends": [
+    "airbnb",
+    "airbnb-typescript",
+    "plugin:@typescript-eslint/recommended",
+    "next",
+    "next/core-web-vitals",
+    "prettier"
+  ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
+    "project": "./tsconfig.json",
     "ecmaFeatures": {
       "jsx": true
     },
@@ -14,7 +24,8 @@
     "sourceType": "module"
   },
   "rules": {
-    "@typescript-eslint/no-unused-vars": "error",
-    "@typescript-eslint/no-explicit-any": "error"
+    "react/function-component-definition": 0,
+    "react/jsx-props-no-spreading": 0,
+    "react/require-default-props": 0
   }
 }

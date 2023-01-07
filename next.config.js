@@ -1,9 +1,12 @@
-/** @type {import('next').NextConfig} */
+/** @type {import("next").NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   compiler: {
     styledComponents: true,
+  },
+  eslint: {
+    ignoreDuringBuilds: true,
   },
   webpack(config) {
     config.module.rules.push({

@@ -8,22 +8,20 @@ type Props = {
   isTransparent?: boolean;
 };
 
-const Header = ({ isTransparent = false }: Props) => {
-  return (
-    <S.Header isTransparent={isTransparent}>
-      <S.Burger>Burger</S.Burger>
+const Header = ({ isTransparent = false }: Props) => (
+  <S.Header isTransparent={isTransparent}>
+    <S.Burger>Burger</S.Burger>
 
-      <ToggleLang isTransparent={isTransparent} />
+    <ToggleLang isTransparent={isTransparent} />
 
-      <Logo />
+    <Logo />
 
-      <NavList />
+    <NavList />
 
-      <S.MobileBasket onClick={() => console.log('basket')}>
-        <S.BasketSVG />
-      </S.MobileBasket>
-    </S.Header>
-  );
-};
+    <S.MobileBasket onClick={() => console.log('basket')}>
+      <S.BasketSVG />
+    </S.MobileBasket>
+  </S.Header>
+);
 
 export default Header;
