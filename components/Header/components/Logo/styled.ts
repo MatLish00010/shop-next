@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { Logo } from 'components/svgs';
+import { Logo } from '../../icons';
 
 export const DescriptionLogo = styled.h1`
   position: absolute;

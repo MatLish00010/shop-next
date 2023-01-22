@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
-import { Basket } from 'components/svgs';
+import pxToRem from 'utils/typography/pxToRem';
+import { Basket } from './icons';
 
 export const Button = styled.button`
   display: flex;
@@ -8,35 +9,21 @@ export const Button = styled.button`
 `;
 
 export const Header = styled.header<{ isTransparent: boolean }>`
-  padding: 1.8rem 5rem;
-  background: ${({ isTransparent, theme: { colors } }) => (isTransparent ? 'transparent' : colors.background.white)};
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom-width: ${({ isTransparent }) => (isTransparent ? 0 : 1)}px;
-  border-bottom-color: ${({ theme: { colors } }) => colors.border.primary};
-  border-bottom-style: solid;
+  padding: ${pxToRem(44)} ${pxToRem(19)} ${pxToRem(16)};
+  background: ${({ isTransparent, theme: { colors } }) => (isTransparent ? 'transparent' : colors.background.white)};
 
   * {
     color: ${({ isTransparent, theme: { colors } }) =>
       isTransparent ? colors.palette.primary : colors.palette.secondary};
   }
-
-  @media ${({ theme: { screenSize } }) => screenSize.desktopBig} {
-    padding: 1.25rem 3.5rem;
-  }
-
-  @media ${({ theme: { screenSize } }) => screenSize.tablet} {
-    padding: 1rem;
-  }
 `;
 
-export const Burger = styled(Button)`
-  display: none;
-
-  @media ${({ theme: { screenSize } }) => screenSize.tablet} {
-    display: block;
-  }
+export const BurgerBtn = styled.button`
+  padding: 0;
+  display: flex;
 `;
 
 export const BasketSVG = styled(Basket)`

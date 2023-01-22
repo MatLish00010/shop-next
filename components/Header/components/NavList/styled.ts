@@ -1,5 +1,6 @@
 import styled from 'styled-components';
-import { Basket, Heard, Search } from 'components/svgs';
+
+import { Basket, Heard, Search } from '../../icons';
 
 export const Nav = styled.nav`
   flex: 1 1 100%;

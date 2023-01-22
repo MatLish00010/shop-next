@@ -8,9 +8,9 @@ const breakpoints = {
 };
 
 const screenSize = {
-  mobile: `(max-width: ${breakpoints.s}px)`,
-  tablet: `(max-width: ${breakpoints.m}px)`,
-  desktop: `(max-width: ${breakpoints.l}px)`,
+  mobile: `(min-width: 0)`,
+  tablet: `(max-width: ${breakpoints.s}px)`,
+  desktop: `(max-width: ${breakpoints.m}px)`,
   desktopBig: `(max-width: ${breakpoints.xl}px)`,
 };
 
