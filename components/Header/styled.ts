@@ -8,13 +8,6 @@ export const Button = styled.button`
   align-items: center;
 `;
 
-export const Header = styled.header<{ isTransparent: boolean }>`
-  * {
-    color: ${({ isTransparent, theme: { colors } }) =>
-      isTransparent ? colors.palette.primary : colors.palette.secondary};
-  }
-`;
-
 export const Wrapper = styled.div<{ isHide: boolean; isTransparent: boolean }>`
   padding: ${pxToRem(44)} ${pxToRem(19)} ${pxToRem(16)};
   display: flex;
@@ -23,6 +16,11 @@ export const Wrapper = styled.div<{ isHide: boolean; isTransparent: boolean }>`
   opacity: ${({ isHide }) => (isHide ? 0 : 1)};
   background: ${({ isTransparent, theme: { colors } }) => (isTransparent ? 'transparent' : colors.background.white)};
   transition: 0.5s opacity;
+
+  * {
+    color: ${({ isTransparent, theme: { colors } }) =>
+      isTransparent ? colors.palette.primary : colors.palette.secondary};
+  }
 `;
 
 export const BurgerBtn = styled.button`

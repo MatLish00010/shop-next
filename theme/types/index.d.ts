@@ -1,4 +1,4 @@
-import 'styled-components';
+import { FlattenSimpleInterpolation } from 'styled-components';
 
 declare module 'styled-components' {
   export interface DefaultTheme {
@@ -30,6 +30,12 @@ declare module 'styled-components' {
       tablet: string;
       desktop: string;
       desktopBig: string;
+    };
+    typography: {
+      fontFamily: {
+        libreFranklin: FlattenSimpleInterpolation;
+        calistoga: FlattenSimpleInterpolation;
+      };
     };
   }
 }

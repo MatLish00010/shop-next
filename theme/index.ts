@@ -1,4 +1,4 @@
-import { DefaultTheme } from 'styled-components';
+import { css, DefaultTheme } from 'styled-components';
 
 const breakpoints = {
   s: 480,
@@ -12,6 +12,13 @@ const screenSize = {
   tablet: `(max-width: ${breakpoints.s}px)`,
   desktop: `(max-width: ${breakpoints.m}px)`,
   desktopBig: `(max-width: ${breakpoints.xl}px)`,
+};
+
+const typography = {
+  fontFamily: {
+    libreFranklin: css`var(--libreFranklin-font)`,
+    calistoga: css`var(--calistoga-font)`,
+  },
 };
 
 const theme: DefaultTheme = {
@@ -34,6 +41,7 @@ const theme: DefaultTheme = {
   },
   breakpoints,
   screenSize,
+  typography,
 };
 
 export default theme;

@@ -4,7 +4,7 @@ const GlobalStyle = createGlobalStyle`
   html {
     display: block;
     height: 100%;
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
+    font-family: var(--libreFranklin-font), var(--calistoga-font), -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
     Helvetica Neue, sans-serif;
   }
 
