@@ -14,12 +14,12 @@ export const Wrapper = styled.div<{ isHide: boolean; isTransparent: boolean }>`
   align-items: center;
   justify-content: space-between;
   opacity: ${({ isHide }) => (isHide ? 0 : 1)};
-  background: ${({ isTransparent, theme: { colors } }) => (isTransparent ? 'transparent' : colors.background.white)};
+  background: ${({ isTransparent, theme: { colors } }) => (isTransparent ? 'transparent' : colors.palette.white[50])};
   transition: 0.5s opacity;
 
   * {
     color: ${({ isTransparent, theme: { colors } }) =>
-      isTransparent ? colors.palette.primary : colors.palette.secondary};
+      isTransparent ? colors.palette.primary : colors.palette.green[100]};
   }
 `;
 

@@ -26,6 +26,6 @@ export const ButtonLanguage = styled.button<{ mr?: boolean; isSelected: boolean;
     height: 0.31rem;
     border-radius: 50%;
     background-color: ${({ isTransparent, theme: { colors } }) =>
-      isTransparent ? colors.palette.white : colors.palette.secondary};
+      isTransparent ? colors.palette.white[50] : colors.palette.green[100]};
   }
 `;

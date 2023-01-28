@@ -5,15 +5,15 @@ declare module 'styled-components' {
     colors: {
       palette: {
         primary: string;
-        secondary: string;
-        tertiary: string;
-        white: string;
-      };
-      background: {
-        primary: string;
-        secondary: string;
-        tertiary: string;
-        white: string;
+        white: {
+          50: string;
+          100: string;
+        };
+        green: {
+          50: string;
+          100: string;
+          200: string;
+        };
       };
       border: {
         primary: string;
