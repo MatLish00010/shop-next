@@ -32,7 +32,6 @@ export const Header = styled.header<{ isHide: boolean; isTransparent: boolean }>
 `;
 
 export const BurgerBtn = styled.button`
-  padding: 0;
   display: flex;
 
   @media ${({ theme: { screenSize } }) => screenSize.desktopM} {
@@ -41,11 +40,11 @@ export const BurgerBtn = styled.button`
 `;
 
 export const BasketSVG = styled(Basket)`
-  width: 1.5rem;
-  height: 1.5rem;
+  width: ${pxToRem(24)};
+  height: ${pxToRem(24)};
 `;
 
-export const MobileBasket = styled(Button)`
+export const MobileBasketBtn = styled(Button)`
   display: flex;
 
   @media ${({ theme: { screenSize } }) => screenSize.desktopM} {

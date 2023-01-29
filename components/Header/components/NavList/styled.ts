@@ -17,11 +17,9 @@ export const Nav = styled.nav`
 export const ListNav = styled.ul`
   display: flex;
   align-items: center;
-  margin: 0;
 `;
 
 export const ItemNav = styled.li`
-  list-style: none;
   margin-right: ${pxToRem(20)};
 
   &:first-child {
@@ -39,22 +37,22 @@ export const Button = styled.button`
 `;
 
 export const ButtonLogin = styled(Button)`
-  font-size: 1rem;
-  line-height: 1.5rem;
+  font-size: ${pxToRem(16)};
+  line-height: ${pxToRem(24)};
   text-transform: uppercase;
 `;
 
 export const SearchSVG = styled(Search)`
-  width: 1.5rem;
-  height: 1.5rem;
+  width: ${pxToRem(24)};
+  height: ${pxToRem(24)};
 `;
 
 export const HeardSVG = styled(Heard)`
-  width: 1.5rem;
-  height: 1.5rem;
+  width: ${pxToRem(24)};
+  height: ${pxToRem(24)};
 `;
 
 export const BasketSVG = styled(Basket)`
-  width: 1.5rem;
-  height: 1.5rem;
+  width: ${pxToRem(24)};
+  height: ${pxToRem(24)};
 `;

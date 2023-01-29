@@ -59,9 +59,9 @@ const MobileNavigation = ({ isOpen = false, toggleMobileMenu }: Props) => {
       </S.TopBar>
       <S.Actions>
         {actionsConfig.map((item) => (
-          <S.ItemAction key={item.name}>
+          <li key={item.name}>
             <S.ButtonAction onClick={item.callback}>{item.icon}</S.ButtonAction>
-          </S.ItemAction>
+          </li>
         ))}
       </S.Actions>
       <nav>

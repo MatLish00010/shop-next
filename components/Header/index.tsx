@@ -26,9 +26,9 @@ const Header = ({ isTransparent = false }: Props) => {
         <ToggleLang isTransparent={isTransparent} />
         <Logo />
         <NavList />
-        <S.MobileBasket onClick={() => console.log('basket')}>
+        <S.MobileBasketBtn onClick={() => console.log('basket')}>
           <S.BasketSVG />
-        </S.MobileBasket>
+        </S.MobileBasketBtn>
       </S.Header>
       <MobileNavigation isOpen={isActiveMobileNav} toggleMobileMenu={toggleMobileMenu} />
     </>

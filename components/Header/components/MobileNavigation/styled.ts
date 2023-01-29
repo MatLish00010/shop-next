@@ -22,6 +22,7 @@ export const Wrapper = styled(DialogOverlay)`
   right: 0;
   bottom: 0;
   backdrop-filter: blur(5px);
+  overflow: scroll;
 
   * {
     color: ${({ theme: { colors } }) => colors.palette.primary};
@@ -38,14 +39,11 @@ export const Title = styled.p`
   font-size: 16px;
   line-height: 24px;
   text-align: center;
-  margin: 0;
 `;
 
 export const ButtonClose = styled.button`
-  padding: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  align-content: center;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -53,17 +51,11 @@ export const ButtonClose = styled.button`
 `;
 
 export const Actions = styled.ul`
-  padding: 0;
-  list-style-type: none;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   gap: ${pxToRem(47)};
   margin: 0 0 ${pxToRem(75)} 0;
-`;
-
-export const ItemAction = styled.li`
-  padding: 0;
 `;
 
 export const ButtonAction = styled.button`
@@ -71,9 +63,6 @@ export const ButtonAction = styled.button`
 `;
 
 export const ListNav = styled.ul`
-  padding: 0;
-  margin: 0;
-  list-style-type: none;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -82,7 +71,6 @@ export const ListNav = styled.ul`
 `;
 
 export const ItemNav = styled.li`
-  padding: 0;
   width: 100%;
 `;
 
