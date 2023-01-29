@@ -30,7 +30,7 @@ const Header = ({ isTransparent = false }: Props) => {
           <S.BasketSVG />
         </S.MobileBasket>
       </S.Wrapper>
-      <MobileNavigation isActive={isActiveMobileNav} toggleMobileMenu={toggleMobileMenu} />
+      <MobileNavigation isOpen={isActiveMobileNav} toggleMobileMenu={toggleMobileMenu} />
     </header>
   );
 };

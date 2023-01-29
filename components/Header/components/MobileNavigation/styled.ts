@@ -1,33 +1,27 @@
 import styled, { keyframes } from 'styled-components';
+import { DialogOverlay } from '@reach/dialog';
 import Link from 'next/link';
 
 import pxToRem from 'utils/typography/pxToRem';
 
-const openMenu = keyframes`
-  0% {
-    display: none;
+const slideIn = keyframes`
+  from {
     transform: translateX(-100%);
   }
-
-  100% {
-    transform: translateX(0);
-    display: block;
+  to {
+    transform: translateX(0%);
   }
 `;
 
-export const Container = styled.div<{ isActive: boolean }>`
+export const Wrapper = styled(DialogOverlay)`
   padding: ${pxToRem(50)} ${pxToRem(16)} ${pxToRem(20)};
-  animation: ${openMenu} 500ms;
-  animation-direction: alternate;
+  animation: ${slideIn} 500ms;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  display: ${({ isActive }) => (isActive ? 'block' : 'none')};
-  transform: translateX(${({ isActive }) => (isActive ? 0 : '-100%')});
   backdrop-filter: blur(5px);
-  overflow: scroll;
 
   * {
     color: ${({ theme: { colors } }) => colors.palette.primary};

@@ -3,11 +3,11 @@ import { Cross, Heard, Search, Basket } from '../../icons';
 import * as S from './styled';
 
 type Props = {
-  isActive: boolean;
+  isOpen: boolean;
   toggleMobileMenu: () => void;
 };
 
-const MobileNavigation = ({ isActive = false, toggleMobileMenu }: Props) => {
+const MobileNavigation = ({ isOpen = false, toggleMobileMenu }: Props) => {
   const actionsConfig = [
     {
       name: 'search',
@@ -50,7 +50,7 @@ const MobileNavigation = ({ isActive = false, toggleMobileMenu }: Props) => {
   ];
 
   return (
-    <S.Container isActive={isActive}>
+    <S.Wrapper isOpen={isOpen} onDismiss={toggleMobileMenu}>
       <S.TopBar>
         <S.Title>Menu</S.Title>
         <S.ButtonClose onClick={toggleMobileMenu}>
@@ -73,7 +73,7 @@ const MobileNavigation = ({ isActive = false, toggleMobileMenu }: Props) => {
           ))}
         </S.ListNav>
       </nav>
-    </S.Container>
+    </S.Wrapper>
   );
 };
 
