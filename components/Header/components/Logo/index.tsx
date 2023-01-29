@@ -1,11 +1,9 @@
-import Link from 'next/link';
-
 import * as S from './styled';
 
 const Logo = () => (
-  <Link href="/">
+  <S.LinkWrapper href="/">
     <S.DescriptionLogo>YONNE</S.DescriptionLogo>
     <S.LogoSVG />
-  </Link>
+  </S.LinkWrapper>
 );
 export default Logo;

@@ -9,9 +9,10 @@ const breakpoints = {
 
 const screenSize = {
   mobile: `(min-width: 0)`,
-  tablet: `(max-width: ${breakpoints.s}px)`,
-  desktop: `(max-width: ${breakpoints.m}px)`,
-  desktopBig: `(max-width: ${breakpoints.xl}px)`,
+  tablet: `(min-width: ${breakpoints.s}px)`,
+  desktopM: `(min-width: ${breakpoints.m}px)`,
+  desktopL: `(min-width: ${breakpoints.l}px)`,
+  desktopXL: `(min-width: ${breakpoints.xl}px)`,
 };
 
 const typography = {

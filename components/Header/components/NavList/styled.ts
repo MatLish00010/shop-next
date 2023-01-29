@@ -1,15 +1,16 @@
 import styled from 'styled-components';
 
+import pxToRem from 'utils/typography/pxToRem';
 import { Basket, Heard, Search } from '../../icons';
 
 export const Nav = styled.nav`
-  flex: 1 1 100%;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
+  display: none;
 
-  @media ${({ theme: { screenSize } }) => screenSize.tablet} {
-    display: none;
+  @media ${({ theme: { screenSize } }) => screenSize.desktopM} {
+    display: flex;
+    flex: 1 1 100%;
+    justify-content: flex-end;
+    align-items: center;
   }
 `;
 
@@ -17,30 +18,18 @@ export const ListNav = styled.ul`
   display: flex;
   align-items: center;
   margin: 0;
-
-  @media ${({ theme: { screenSize } }) => screenSize.tablet} {
-    display: none;
-  }
 `;
 
 export const ItemNav = styled.li`
   list-style: none;
-  margin-right: 1.8rem;
+  margin-right: ${pxToRem(20)};
 
   &:first-child {
-    margin-right: 3.1rem;
+    margin-right: ${pxToRem(30)};
   }
 
   &:last-child {
     margin-right: 0;
-  }
-
-  @media ${({ theme: { screenSize } }) => screenSize.desktopBig} {
-    margin-right: 1rem;
-
-    &:first-child {
-      margin-right: 2.5rem;
-    }
   }
 `;
 

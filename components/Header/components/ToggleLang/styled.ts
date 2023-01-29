@@ -2,7 +2,11 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   display: none;
-  flex: 1 1 100%;
+
+  @media ${({ theme: { screenSize } }) => screenSize.desktopM} {
+    display: flex;
+    flex: 1 1 100%;
+  }
 `;
 
 export const ButtonLanguage = styled.button<{ mr?: boolean; isSelected: boolean; isTransparent: boolean }>`

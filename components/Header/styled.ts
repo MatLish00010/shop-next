@@ -8,7 +8,7 @@ export const Button = styled.button`
   align-items: center;
 `;
 
-export const Wrapper = styled.div<{ isHide: boolean; isTransparent: boolean }>`
+export const Header = styled.header<{ isHide: boolean; isTransparent: boolean }>`
   padding: ${pxToRem(44)} ${pxToRem(19)} ${pxToRem(16)};
   display: flex;
   align-items: center;
@@ -19,13 +19,25 @@ export const Wrapper = styled.div<{ isHide: boolean; isTransparent: boolean }>`
 
   * {
     color: ${({ isTransparent, theme: { colors } }) =>
-      isTransparent ? colors.palette.primary : colors.palette.green[100]};
+      isTransparent ? colors.palette.primary : colors.palette.green[200]};
+  }
+
+  @media ${({ theme: { screenSize } }) => screenSize.desktopM} {
+    padding: ${pxToRem(34)} ${pxToRem(19)};
+  }
+
+  @media ${({ theme: { screenSize } }) => screenSize.desktopL} {
+    padding: ${pxToRem(34)} ${pxToRem(80)};
   }
 `;
 
 export const BurgerBtn = styled.button`
   padding: 0;
   display: flex;
+
+  @media ${({ theme: { screenSize } }) => screenSize.desktopM} {
+    display: none;
+  }
 `;
 
 export const BasketSVG = styled(Basket)`
@@ -34,9 +46,9 @@ export const BasketSVG = styled(Basket)`
 `;
 
 export const MobileBasket = styled(Button)`
-  display: none;
+  display: flex;
 
-  @media ${({ theme: { screenSize } }) => screenSize.tablet} {
-    display: flex;
+  @media ${({ theme: { screenSize } }) => screenSize.desktopM} {
+    display: none;
   }
 `;

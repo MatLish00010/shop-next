@@ -18,8 +18,8 @@ const Header = ({ isTransparent = false }: Props) => {
   const toggleMobileMenu = () => setIsActiveMobileNav(!isActiveMobileNav);
 
   return (
-    <header>
-      <S.Wrapper isTransparent={isTransparent} isHide={isActiveMobileNav}>
+    <>
+      <S.Header isTransparent={isTransparent} isHide={isActiveMobileNav}>
         <S.BurgerBtn onClick={toggleMobileMenu}>
           <Burger width={24} height={24} />
         </S.BurgerBtn>
@@ -29,9 +29,9 @@ const Header = ({ isTransparent = false }: Props) => {
         <S.MobileBasket onClick={() => console.log('basket')}>
           <S.BasketSVG />
         </S.MobileBasket>
-      </S.Wrapper>
+      </S.Header>
       <MobileNavigation isOpen={isActiveMobileNav} toggleMobileMenu={toggleMobileMenu} />
-    </header>
+    </>
   );
 };
 

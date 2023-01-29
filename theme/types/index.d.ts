@@ -28,8 +28,9 @@ declare module 'styled-components' {
     screenSize: {
       mobile: string;
       tablet: string;
-      desktop: string;
-      desktopBig: string;
+      desktopM: string;
+      desktopL: string;
+      desktopXL: string;
     };
     typography: {
       fontFamily: {
