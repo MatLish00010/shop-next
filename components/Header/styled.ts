@@ -9,12 +9,14 @@ export const Button = styled.button`
 `;
 
 export const Header = styled.header<{ isHide: boolean; isTransparent: boolean }>`
+  --background-header: ${({ isTransparent, theme: { colors } }) =>
+    isTransparent ? 'transparent' : colors.palette.white[50]};
   padding: ${pxToRem(44)} ${pxToRem(19)} ${pxToRem(16)};
   display: flex;
   align-items: center;
   justify-content: space-between;
   opacity: ${({ isHide }) => (isHide ? 0 : 1)};
-  background: ${({ isTransparent, theme: { colors } }) => (isTransparent ? 'transparent' : colors.palette.white[50])};
+  background: var(--background-header);
   transition: 0.5s opacity;
 
   * {
