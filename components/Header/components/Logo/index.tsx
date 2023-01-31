@@ -1,8 +1,10 @@
+import SRonly from 'components/SRonly';
+
 import * as S from './styled';
 
 const Logo = () => (
   <S.LinkWrapper href="/">
-    <S.DescriptionLogo>YONNE</S.DescriptionLogo>
+    <SRonly>YONNE</SRonly>
     <S.LogoSVG />
   </S.LinkWrapper>
 );

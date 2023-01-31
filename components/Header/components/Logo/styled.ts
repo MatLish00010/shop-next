@@ -8,12 +8,6 @@ export const LinkWrapper = styled(Link)`
   font-size: 0;
 `;
 
-export const DescriptionLogo = styled.h1`
-  position: absolute;
-  visibility: hidden;
-  font-size: 0;
-`;
-
 export const LogoSVG = styled(Logo)`
   width: ${pxToRem(64)};
   height: ${pxToRem(18)};
