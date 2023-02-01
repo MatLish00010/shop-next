@@ -20,13 +20,13 @@ const Header = ({ isTransparent = false }: Props) => {
   return (
     <>
       <S.Header isTransparent={isTransparent} isHide={isActiveMobileNav}>
-        <S.BurgerBtn onClick={toggleMobileMenu}>
+        <S.BurgerBtn aria-label="mobile menu" onClick={toggleMobileMenu}>
           <Burger width={24} height={24} />
         </S.BurgerBtn>
         <ToggleLang isTransparent={isTransparent} />
         <Logo />
         <NavList />
-        <S.MobileBasketBtn onClick={() => console.log('basket')}>
+        <S.MobileBasketBtn aria-label="basket" onClick={() => console.log('basket')}>
           <S.BasketSVG />
         </S.MobileBasketBtn>
       </S.Header>

@@ -53,7 +53,7 @@ const MobileNavigation = ({ isOpen = false, toggleMobileMenu }: Props) => {
     <S.Wrapper isOpen={isOpen} onDismiss={toggleMobileMenu}>
       <S.TopBar>
         <S.Title>Menu</S.Title>
-        <S.ButtonClose onClick={toggleMobileMenu}>
+        <S.ButtonClose aria-label="close mobile menu" onClick={toggleMobileMenu}>
           <Cross width={32} height={32} />
         </S.ButtonClose>
       </S.TopBar>
