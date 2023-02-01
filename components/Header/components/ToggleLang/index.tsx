@@ -16,10 +16,16 @@ const ToggleLang = ({ isTransparent = false }: Props) => {
         onClick={() => setLanguage('EN')}
         isSelected={language === 'EN'}
         isTransparent={isTransparent}
+        aria-label="change to english"
       >
         EN
       </S.ButtonLanguage>
-      <S.ButtonLanguage onClick={() => setLanguage('RU')} isSelected={language === 'RU'} isTransparent={isTransparent}>
+      <S.ButtonLanguage
+        aria-label="change to russia"
+        onClick={() => setLanguage('RU')}
+        isSelected={language === 'RU'}
+        isTransparent={isTransparent}
+      >
         RU
       </S.ButtonLanguage>
     </S.Container>
