@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 import pxToRem from 'utils/typography/pxToRem';
 import { Basket } from './icons';
@@ -24,10 +24,18 @@ export const Header = styled.header<{ isHide: boolean; isTransparent: boolean }>
       isTransparent ? colors.palette.primary : colors.palette.green[200]};
   }
 
+  ${({ isTransparent }) =>
+    isTransparent &&
+    css`
+      position: absolute;
+      top: 0;
+      width: 100%;
+      z-index: 10;
+    `};
+
   @media ${({ theme: { screenSize } }) => screenSize.desktopM} {
     padding: ${pxToRem(34)} ${pxToRem(19)};
   }
-
   @media ${({ theme: { screenSize } }) => screenSize.desktopL} {
     padding: ${pxToRem(34)} ${pxToRem(80)};
   }

@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 
-import Header from 'components/Header';
+import Hero from 'components/Hero';
 
 import * as S from './styled';
 
@@ -13,7 +13,7 @@ const Home = () => (
       <link rel="icon" href="/favicon.ico" />
     </Head>
     <S.Wrapper>
-      <Header />
+      <Hero />
       <S.Main>Main</S.Main>
       <footer>Footer</footer>
     </S.Wrapper>
