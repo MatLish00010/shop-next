@@ -1,53 +1,55 @@
 import styled from 'styled-components';
 
-import { Basket } from 'components/svgs';
+import pxToRem from 'utils/typography/pxToRem';
+import { Basket } from './icons';
 
 export const Button = styled.button`
   display: flex;
   align-items: center;
 `;
 
-export const Header = styled.header<{ isTransparent: boolean }>`
-  padding: 1.8rem 5rem;
-  background: ${({ isTransparent, theme: { colors } }) => (isTransparent ? 'transparent' : colors.background.white)};
+export const Header = styled.header<{ isHide: boolean; isTransparent: boolean }>`
+  --background-header: ${({ isTransparent, theme: { colors } }) =>
+    isTransparent ? 'transparent' : colors.palette.white[50]};
+  padding: ${pxToRem(44)} ${pxToRem(19)} ${pxToRem(16)};
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom-width: ${({ isTransparent }) => (isTransparent ? 0 : 1)}px;
-  border-bottom-color: ${({ theme: { colors } }) => colors.border.primary};
-  border-bottom-style: solid;
+  opacity: ${({ isHide }) => (isHide ? 0 : 1)};
+  background: var(--background-header);
+  transition: 0.5s opacity;
 
   * {
     color: ${({ isTransparent, theme: { colors } }) =>
-      isTransparent ? colors.palette.primary : colors.palette.secondary};
+      isTransparent ? colors.palette.primary : colors.palette.green[200]};
   }
 
-  @media ${({ theme: { screenSize } }) => screenSize.desktopBig} {
-    padding: 1.25rem 3.5rem;
+  @media ${({ theme: { screenSize } }) => screenSize.desktopM} {
+    padding: ${pxToRem(34)} ${pxToRem(19)};
   }
 
-  @media ${({ theme: { screenSize } }) => screenSize.tablet} {
-    padding: 1rem;
+  @media ${({ theme: { screenSize } }) => screenSize.desktopL} {
+    padding: ${pxToRem(34)} ${pxToRem(80)};
   }
 `;
 
-export const Burger = styled(Button)`
-  display: none;
+export const BurgerBtn = styled.button`
+  display: flex;
 
-  @media ${({ theme: { screenSize } }) => screenSize.tablet} {
-    display: block;
+  @media ${({ theme: { screenSize } }) => screenSize.desktopM} {
+    display: none;
   }
 `;
 
 export const BasketSVG = styled(Basket)`
-  width: 1.5rem;
-  height: 1.5rem;
+  width: ${pxToRem(24)};
+  height: ${pxToRem(24)};
 `;
 
-export const MobileBasket = styled(Button)`
-  display: none;
+export const MobileBasketBtn = styled(Button)`
+  display: flex;
 
-  @media ${({ theme: { screenSize } }) => screenSize.tablet} {
-    display: flex;
+  @media ${({ theme: { screenSize } }) => screenSize.desktopM} {
+    display: none;
   }
 `;

@@ -1,45 +1,33 @@
 import styled from 'styled-components';
-import { Basket, Heard, Search } from 'components/svgs';
+
+import pxToRem from 'utils/typography/pxToRem';
+import { Basket, Heard, Search } from '../../icons';
 
 export const Nav = styled.nav`
-  flex: 1 1 100%;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
+  display: none;
 
-  @media ${({ theme: { screenSize } }) => screenSize.tablet} {
-    display: none;
+  @media ${({ theme: { screenSize } }) => screenSize.desktopM} {
+    display: flex;
+    flex: 1 1 100%;
+    justify-content: flex-end;
+    align-items: center;
   }
 `;
 
 export const ListNav = styled.ul`
   display: flex;
   align-items: center;
-  margin: 0;
-
-  @media ${({ theme: { screenSize } }) => screenSize.tablet} {
-    display: none;
-  }
 `;
 
 export const ItemNav = styled.li`
-  list-style: none;
-  margin-right: 1.8rem;
+  margin-right: ${pxToRem(20)};
 
   &:first-child {
-    margin-right: 3.1rem;
+    margin-right: ${pxToRem(30)};
   }
 
   &:last-child {
     margin-right: 0;
-  }
-
-  @media ${({ theme: { screenSize } }) => screenSize.desktopBig} {
-    margin-right: 1rem;
-
-    &:first-child {
-      margin-right: 2.5rem;
-    }
   }
 `;
 
@@ -49,22 +37,22 @@ export const Button = styled.button`
 `;
 
 export const ButtonLogin = styled(Button)`
-  font-size: 1rem;
-  line-height: 1.5rem;
+  font-size: ${pxToRem(16)};
+  line-height: ${pxToRem(24)};
   text-transform: uppercase;
 `;
 
 export const SearchSVG = styled(Search)`
-  width: 1.5rem;
-  height: 1.5rem;
+  width: ${pxToRem(24)};
+  height: ${pxToRem(24)};
 `;
 
 export const HeardSVG = styled(Heard)`
-  width: 1.5rem;
-  height: 1.5rem;
+  width: ${pxToRem(24)};
+  height: ${pxToRem(24)};
 `;
 
 export const BasketSVG = styled(Basket)`
-  width: 1.5rem;
-  height: 1.5rem;
+  width: ${pxToRem(24)};
+  height: ${pxToRem(24)};
 `;

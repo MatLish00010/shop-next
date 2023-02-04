@@ -1,18 +1,19 @@
 import styled from 'styled-components';
+import Link from 'next/link';
 
-import { Logo } from 'components/svgs';
+import pxToRem from 'utils/typography/pxToRem';
+import { Logo } from '../../icons';
 
-export const DescriptionLogo = styled.h1`
-  position: absolute;
-  visibility: hidden;
+export const LinkWrapper = styled(Link)`
+  font-size: 0;
 `;
 
 export const LogoSVG = styled(Logo)`
-  width: 7rem;
-  height: 2rem;
+  width: ${pxToRem(64)};
+  height: ${pxToRem(18)};
 
-  @media ${({ theme: { screenSize } }) => screenSize.tablet} {
-    width: 4rem;
-    height: 1rem;
+  @media ${({ theme: { screenSize } }) => screenSize.desktopM} {
+    width: ${pxToRem(115)};
+    height: ${pxToRem(32)};
   }
 `;

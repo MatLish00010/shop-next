@@ -1,19 +1,19 @@
-import 'styled-components';
+import { FlattenSimpleInterpolation } from 'styled-components';
 
 declare module 'styled-components' {
   export interface DefaultTheme {
     colors: {
       palette: {
         primary: string;
-        secondary: string;
-        tertiary: string;
-        white: string;
-      };
-      background: {
-        primary: string;
-        secondary: string;
-        tertiary: string;
-        white: string;
+        white: {
+          50: string;
+          100: string;
+        };
+        green: {
+          50: string;
+          100: string;
+          200: string;
+        };
       };
       border: {
         primary: string;
@@ -28,8 +28,15 @@ declare module 'styled-components' {
     screenSize: {
       mobile: string;
       tablet: string;
-      desktop: string;
-      desktopBig: string;
+      desktopM: string;
+      desktopL: string;
+      desktopXL: string;
+    };
+    typography: {
+      fontFamily: {
+        libreFranklin: FlattenSimpleInterpolation;
+        calistoga: FlattenSimpleInterpolation;
+      };
     };
   }
 }

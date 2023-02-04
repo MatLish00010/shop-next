@@ -1,11 +1,11 @@
-import Link from 'next/link';
+import SRonly from 'components/SRonly';
 
 import * as S from './styled';
 
 const Logo = () => (
-  <Link href="/">
-    <S.DescriptionLogo>YONNE</S.DescriptionLogo>
+  <S.LinkWrapper href="/">
+    <SRonly>YONNE</SRonly>
     <S.LogoSVG />
-  </Link>
+  </S.LinkWrapper>
 );
 export default Logo;
