@@ -23,7 +23,7 @@ export const Overlay = styled(DialogOverlay)`
   overflow: scroll;
   z-index: 20;
   animation: ${slideIn} 500ms;
-  background-color: hsla(223, 18%, 17%, 0.5);
+  background-color: ${({ theme: { colors } }) => colors.palette.dark[50]};
 `;
 
 export const Content = styled(DialogContent)`

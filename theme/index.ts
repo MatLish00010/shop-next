@@ -35,9 +35,9 @@ const theme: DefaultTheme = {
         100: '#738C80',
         200: '#163F2B',
       },
-    },
-    border: {
-      primary: '#E0E5E3',
+      dark: {
+        50: 'hsla(223, 18%, 17%, 0.5)',
+      },
     },
   },
   breakpoints,
