@@ -1,5 +1,5 @@
 import styled, { keyframes } from 'styled-components';
-import { DialogOverlay } from '@reach/dialog';
+import { DialogOverlay, DialogContent } from '@reach/dialog';
 import Link from 'next/link';
 
 import pxToRem from 'utils/typography/pxToRem';
@@ -13,9 +13,7 @@ const slideIn = keyframes`
   }
 `;
 
-export const Wrapper = styled(DialogOverlay)`
-  padding: ${pxToRem(50)} ${pxToRem(16)} ${pxToRem(20)};
-  animation: ${slideIn} 500ms;
+export const Overlay = styled(DialogOverlay)`
   position: fixed;
   top: 0;
   left: 0;
@@ -23,6 +21,13 @@ export const Wrapper = styled(DialogOverlay)`
   bottom: 0;
   backdrop-filter: blur(5px);
   overflow: scroll;
+  z-index: 20;
+  animation: ${slideIn} 500ms;
+  background-color: ${({ theme: { colors } }) => colors.palette.dark[50]};
+`;
+
+export const Content = styled(DialogContent)`
+  padding: ${pxToRem(50)} ${pxToRem(16)} ${pxToRem(20)};
 
   * {
     color: ${({ theme: { colors } }) => colors.palette.primary};

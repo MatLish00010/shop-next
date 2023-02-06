@@ -14,9 +14,9 @@ declare module 'styled-components' {
           100: string;
           200: string;
         };
-      };
-      border: {
-        primary: string;
+        dark: {
+          50: string;
+        };
       };
     };
     breakpoints: {

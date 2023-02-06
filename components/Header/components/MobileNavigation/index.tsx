@@ -50,30 +50,32 @@ const MobileNavigation = ({ isOpen = false, toggleMobileMenu }: Props) => {
   ];
 
   return (
-    <S.Wrapper isOpen={isOpen} onDismiss={toggleMobileMenu}>
-      <S.TopBar>
-        <S.Title>Menu</S.Title>
-        <S.ButtonClose aria-label="close mobile menu" onClick={toggleMobileMenu}>
-          <Cross width={32} height={32} />
-        </S.ButtonClose>
-      </S.TopBar>
-      <S.Actions>
-        {actionsConfig.map((item) => (
-          <li key={item.name}>
-            <S.ButtonAction onClick={item.callback}>{item.icon}</S.ButtonAction>
-          </li>
-        ))}
-      </S.Actions>
-      <nav>
-        <S.ListNav>
-          {navConfig.map((item) => (
-            <S.ItemNav key={item.name}>
-              <S.LinkNav href={item.path}>{item.name}</S.LinkNav>
-            </S.ItemNav>
+    <S.Overlay isOpen={isOpen} onDismiss={toggleMobileMenu}>
+      <S.Content>
+        <S.TopBar>
+          <S.Title>Menu</S.Title>
+          <S.ButtonClose aria-label="close mobile menu" onClick={toggleMobileMenu}>
+            <Cross width={32} height={32} />
+          </S.ButtonClose>
+        </S.TopBar>
+        <S.Actions>
+          {actionsConfig.map((item) => (
+            <li key={item.name}>
+              <S.ButtonAction onClick={item.callback}>{item.icon}</S.ButtonAction>
+            </li>
           ))}
-        </S.ListNav>
-      </nav>
-    </S.Wrapper>
+        </S.Actions>
+        <nav>
+          <S.ListNav>
+            {navConfig.map((item) => (
+              <S.ItemNav key={item.name}>
+                <S.LinkNav href={item.path}>{item.name}</S.LinkNav>
+              </S.ItemNav>
+            ))}
+          </S.ListNav>
+        </nav>
+      </S.Content>
+    </S.Overlay>
   );
 };
 
