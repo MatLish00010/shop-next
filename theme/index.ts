@@ -29,6 +29,7 @@ const theme: DefaultTheme = {
       white: {
         50: '#fff',
         100: '#E0E5E3',
+        200: '#CACACA',
       },
       green: {
         50: '#E1FF8A',

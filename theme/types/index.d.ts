@@ -8,6 +8,7 @@ declare module 'styled-components' {
         white: {
           50: string;
           100: string;
+          200: string;
         };
         green: {
           50: string;

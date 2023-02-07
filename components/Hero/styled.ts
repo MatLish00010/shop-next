@@ -5,7 +5,7 @@ import pxToRem from 'utils/typography/pxToRem';
 
 export const Container = styled.section`
   position: relative;
-  min-height: ${pxToRem(812)};
+  min-height: clamp(100vh, 100vh, ${pxToRem(812)});
 `;
 
 const HeroImage = styled(Image)`

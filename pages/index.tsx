@@ -2,6 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 
 import Hero from 'components/Hero';
+import ZigZagList from 'components/ZigZagList';
 
 import * as S from './styled';
 
@@ -14,7 +15,9 @@ const Home = () => (
     </Head>
     <S.Wrapper>
       <Hero />
-      <S.Main>Main</S.Main>
+      <S.Main>
+        <ZigZagList />
+      </S.Main>
       <footer>Footer</footer>
     </S.Wrapper>
   </>
