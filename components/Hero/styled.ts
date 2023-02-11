@@ -5,7 +5,7 @@ import pxToRem from 'utils/typography/pxToRem';
 
 export const Container = styled.section`
   position: relative;
-  min-height: ${pxToRem(812)};
+  min-height: clamp(100vh, 100vh, ${pxToRem(812)});
 `;
 
 const HeroImage = styled(Image)`
@@ -17,6 +17,7 @@ const HeroImage = styled(Image)`
 
 export const HeroMainImage = styled(HeroImage)`
   display: none;
+  height: 100%;
 
   @media ${({ theme: { screenSize } }) => screenSize.desktopM} {
     display: block;
