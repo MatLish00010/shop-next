@@ -1,8 +1,9 @@
 import styled from 'styled-components';
 import Link from 'next/link';
 
+import Logo from 'assets/logo.svg';
+
 import pxToRem from 'utils/typography/pxToRem';
-import { Logo } from '../../icons';
 
 export const LinkWrapper = styled(Link)`
   font-size: 0;

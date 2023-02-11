@@ -3,6 +3,7 @@ import Head from 'next/head';
 
 import Hero from 'components/Hero';
 import ZigZagList from 'components/ZigZagList';
+import Footer from 'components/Footer';
 
 import * as S from './styled';
 
@@ -18,7 +19,7 @@ const Home = () => (
       <S.Main>
         <ZigZagList />
       </S.Main>
-      <footer>Footer</footer>
+      <Footer />
     </S.Wrapper>
   </>
 );
