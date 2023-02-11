@@ -17,6 +17,7 @@ const HeroImage = styled(Image)`
 
 export const HeroMainImage = styled(HeroImage)`
   display: none;
+  height: 100%;
 
   @media ${({ theme: { screenSize } }) => screenSize.desktopM} {
     display: block;
