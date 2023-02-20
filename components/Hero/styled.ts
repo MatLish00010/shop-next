@@ -9,8 +9,8 @@ export const Container = styled.section`
 `;
 
 const HeroImage = styled(Image)`
-  display: block;
   max-height: 100%;
+  display: block;
   width: 100%;
   object-fit: cover;
 `;
