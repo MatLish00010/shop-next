@@ -5,12 +5,12 @@ import pxToRem from 'utils/typography/pxToRem';
 
 export const Container = styled.section`
   position: relative;
-  min-height: clamp(100vh, 100vh, ${pxToRem(812)});
+  height: clamp(100vh, 100vh, 812px);
 `;
 
 const HeroImage = styled(Image)`
-  display: block;
   max-height: 100%;
+  display: block;
   width: 100%;
   object-fit: cover;
 `;
