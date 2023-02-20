@@ -1,4 +1,4 @@
-import { FlattenSimpleInterpolation } from 'styled-components';
+import { FlattenSimpleInterpolation, ThemedCssFunction } from 'styled-components';
 
 declare module 'styled-components' {
   export interface DefaultTheme {
@@ -8,6 +8,7 @@ declare module 'styled-components' {
         white: {
           50: string;
           100: string;
+          200: string;
         };
         green: {
           50: string;
@@ -37,6 +38,9 @@ declare module 'styled-components' {
         libreFranklin: FlattenSimpleInterpolation;
         calistoga: FlattenSimpleInterpolation;
       };
+    };
+    animations: {
+      button: ThemedCssFunction;
     };
   }
 }

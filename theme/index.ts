@@ -1,5 +1,7 @@
 import { css, DefaultTheme } from 'styled-components';
 
+import animationButton from './animation/Button';
+
 const breakpoints = {
   s: 480,
   m: 768,
@@ -29,6 +31,7 @@ const theme: DefaultTheme = {
       white: {
         50: '#fff',
         100: '#E0E5E3',
+        200: '#CACACA',
       },
       green: {
         50: '#E1FF8A',
@@ -43,6 +46,9 @@ const theme: DefaultTheme = {
   breakpoints,
   screenSize,
   typography,
+  animations: {
+    button: animationButton,
+  },
 };
 
 export default theme;

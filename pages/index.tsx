@@ -2,6 +2,8 @@ import React from 'react';
 import Head from 'next/head';
 
 import Hero from 'components/Hero';
+import ZigZagList from 'components/ZigZagList';
+import Footer from 'components/Footer';
 
 import * as S from './styled';
 
@@ -13,9 +15,11 @@ const Home = () => (
       <link rel="icon" href="/favicon.ico" />
     </Head>
     <S.Wrapper>
-      <Hero />
-      <S.Main>Main</S.Main>
-      <footer>Footer</footer>
+      <S.Main>
+        <Hero />
+        <ZigZagList />
+      </S.Main>
+      <Footer />
     </S.Wrapper>
   </>
 );
