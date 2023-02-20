@@ -15,8 +15,8 @@ const Home = () => (
       <link rel="icon" href="/favicon.ico" />
     </Head>
     <S.Wrapper>
-      <Hero />
       <S.Main>
+        <Hero />
         <ZigZagList />
       </S.Main>
       <Footer />

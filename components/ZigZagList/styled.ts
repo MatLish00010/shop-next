@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 import Image from 'next/image';
+import Link from 'next/link';
 
 import pxToRem from 'utils/typography/pxToRem';
-import Button from 'components/Button';
 
 export const Section = styled.section`
   padding: ${pxToRem(70)} ${pxToRem(16)} ${pxToRem(80)};
@@ -37,7 +37,7 @@ export const WrapperTitleDesktop = styled.div`
   }
 `;
 
-export const Title = styled.h1`
+export const Title = styled.h2`
   font-size: ${pxToRem(40)};
   font-weight: 700;
   line-height: ${pxToRem(46.8)};
@@ -119,10 +119,31 @@ export const ItemImage = styled(Image)`
   object-fit: cover;
 `;
 
-export const ItemButton = styled(Button)`
+export const ItemButton = styled(Link)`
+  backdrop-filter: blur(15px);
+  text-align: center;
+  font-family: ${({ theme: { typography } }) => typography.fontFamily.libreFranklin};
+  color: ${({ theme: { colors } }) => colors.palette.primary};
+  padding: ${pxToRem(22)};
+  text-transform: uppercase;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: ${({ theme: { colors } }) => colors.palette.dark[50]};
+    opacity: 0.4;
+    z-index: -1;
+  }
+
   @media ${({ theme: { screenSize } }) => screenSize.desktopM} {
     margin-bottom: ${pxToRem(40)};
     width: 90%;
     align-self: center;
   }
+
+  ${({ theme: { animations } }) => animations.button}
 `;
